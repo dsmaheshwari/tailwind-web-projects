@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Ubuntu", sans-serif;
+}
+
+@layer base {
+    h1 {
+        @apply text-4xl text-slate-500 font-medium my-8 text-center;
+    }
+
+    h2 {
+        @apply text-3xl text-slate-500 font-medium my-4 text-center;
+
+        @variant md {
+            @apply my-8;
+        }
+    }
+
+    h4 {
+        @apply text-xl text-slate-600 font-medium my-4;
+    }
+
+    h5 {
+        @apply text-sm text-slate-600 text-left;
+    }
+
+    p {
+        @apply text-sm text-slate-400 my-4 tracking-wide text-center;
+    }
+
+    hr {
+        @apply container max-w-2xl text-slate-200;
+
+        @variant md {
+            @apply container max-w-3xl;
+        }
+    }
+
+    footer {
+        @apply bg-slate-200 px-8 py-8 w-full h-full rounded-t-xl mt-16;
+
+        @variant md{
+            @apply py-16;
+        }
+    }
+}
+
+@utility feature {
+
+    @apply flex flex-col justify-between items-center space-x-0 space-y-4 my-4;
+
+    @variant md {
+        @apply flex-row space-x-12 space-y-0 my-12;
+    }
+
+
+    & .feature-list {
+        h4 {
+            @apply text-base text-slate-600 font-medium my-1 text-center;
+
+            @variant md {
+                @apply text-left text-xl;
+            }
+        }
+
+        p {
+            @apply text-sm text-slate-400 my-1 tracking-wide text-center;
+
+            @variant md {
+                @apply text-left;
+            }
+        }
+    }
+}
+
+@layer utilities {
+    #section-4 p {
+        @apply !text-center;
+    }
+}
+
+@layer components {
+    .button-container {
+        @apply flex flex-col justify-center items-center space-y-6;
+
+        @variant md {
+            @apply h-16 flex-row space-y-0 space-x-4;
+        }
+    }
+
+    .button-primary {
+        @apply min-w-59 h-15 bg-teal-500 px-8 py-4 rounded-full shadow-lg text-white shadow-teal-200 transition-all duration-200 ease-in-out;
+
+        @variant hover {
+            @apply shadow-xl scale-105;
+        }
+    }
+
+    .button-secondary {
+        @apply min-w-59 h-15 bg-indigo-500 px-8 py-4 rounded-full shadow-lg text-white shadow-indigo-200 transition-all duration-200 ease-in-out;
+
+        @variant hover {
+            @apply shadow-xl scale-105;
+        }
+    }
+
+    section {
+        @apply container max-w-2xl px-4;
+
+        @variant md {
+            @apply container max-w-3xl;
+        }
+    }
+
+    .hero-section {
+        @apply container max-w-2xl;
+
+        @variant md {
+            @apply container max-w-3xl;
+        }
+    }
+}
+
+.main-container {
+    background: url('images/bg-header-mobile.png');
+    @apply bg-no-repeat bg-contain;
+
+    @variant md {
+        background: url('images/bg-header-desktop.png');
+        @apply bg-no-repeat bg-contain;
+    }
+}
