@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Montserrat", serif;
+}
+
+@layer utilities {
+    .image-animate {
+        @apply w-full h-full object-cover transition-transform duration-300 ease-out will-change-transform  ;
+
+        @variant group-hover {
+            @apply opacity-70;
+            @apply scale-110;
+        }
+    }
+}
+
+@layer base {
+    .landing-section {
+        @apply h-[80vh] md:min-h-full text-white;
+        background: url("images/mobile/image-hero.jpg");
+        @apply bg-no-repeat bg-cover;
+
+        @variant md {
+            background: url("images/desktop/image-hero.jpg");
+            @apply max-h-screen;
+            @apply bg-no-repeat bg-cover;
+        }
+    }
+
+    .section-child {
+        @apply mx-auto px-8 py-10 w-full;
+
+        @variant md {
+            @apply px-16 py-20 max-w-6xl;
+        }
+    }
+
+    .menu {
+        @apply flex flex-row justify-center items-center;
+
+        ul {
+            @apply flex;
+
+            .menu-item {
+                @apply mx-2 border-b-2 border-b-transparent font-semibold hover:border-b-white duration-150;
+            }
+        }
+    }
+
+    .hamburger-menu {
+        .hamburger {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            transition: all 0.25s;
+            position: relative;
+        }
+
+        .hamburger-top,
+        .hamburger-middle,
+        .hamburger-bottom {
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            top: 0;
+            left: 0;
+            background: #fff;
+            transform: rotate(0);
+            transition: all 0.5s;
+        }
+
+        .hamburger-middle {
+            transform: translateY(7px);
+        }
+
+        .hamburger-bottom {
+            transform: translateY(14px);
+        }
+
+        .open {
+            transform: rotate(90deg);
+        }
+
+        .open .hamburger-top {
+            transform: rotate(45deg) translateY(6px) translateX(6px);
+        }
+
+        .open .hamburger-middle {
+            display: none;
+        }
+
+        .open .hamburger-bottom {
+            transform: rotate(-45deg) translateY(6px) translateX(-6px);
+        }
+    }
+
+    .items-group {
+        .items {
+            @apply overflow-hidden h-56 md:h-72;
+
+            .item-blur {
+                @apply absolute top-0 w-full h-full;
+                @variant group-hover {
+                    @apply bg-linear-to-t from-gray-600 to-transparent top-0;
+
+                }
+            }
+        }
+    }
+}

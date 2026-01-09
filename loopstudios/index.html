@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="output.css">
+        <title>Loopstudios Website Example</title>
+    </head>
+    <body>
+        <!-- landing-section -->
+        <section class="landing-section ">
+            <header class="backdrop-blur md:backdrop-blur-none">
+                <div class="section-child flex flex-col justify-around h-[80vh] md:h-auto">
+                    <div class="flex flex-row justify-between items-center w-full relative">
+                        <img src="images/logo.svg" alt="">
+                        <div class="hidden md:flex menu">
+                            <ul>
+                                <li class="menu-item">
+                                    <a href="javascript:void(0)">
+                                        <span>About</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="javascript:void(0)">
+                                        <span>Careers</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="javascript:void(0)">
+                                        <span>Events</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="javascript:void(0)">
+                                        <span>Products</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="javascript:void(0)">
+                                        <span>Support</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="block hamburger-menu md:hidden">
+                            <button
+                                id="menu-btn"
+                                type="button"
+                                class="z-40 block hamburger md:hidden focus:outline-none"
+                                >
+                                <span class="hamburger-top"></span>
+                                <span class="hamburger-middle"></span>
+                                <span class="hamburger-bottom"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="border boder-b-2 md:w-8/12 mb-20 md:my-15 p-4 md:p-12 ">
+                        <h1 class="uppercase text-5xl tracking-wide font-normal">
+                            Impressive Experiences that deliver
+                        </h1>
+                    </div>
+                    <div id="menu" class="hidden absolute top-0 w-full left-0 z-30 min-h-screen">
+                        <ul class="bg-black flex flex-col w-full items-center justify-center space-y-6 py-20">
+                            <li>
+                                <img src="images/logo.svg" alt="" class="mb-30">
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:void(0)">
+                                    <span>About</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:void(0)">
+                                    <span>Careers</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:void(0)">
+                                    <span>Events</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:void(0)">
+                                    <span>Products</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:void(0)">
+                                    <span>Support</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+        </section>
+
+        <section>
+            <div class="section-child flex flex-col md:flex-row items-center md:px-12 relative">
+                <div class="relative">
+                    <img src="images/desktop/image-interactive.jpg" alt="" class="hidden md:block">
+                    <img src="images/mobile/image-interactive.jpg" alt="" class="block md:hidden">
+                    <div class="md:absolute bottom-0 -right-[10%] md:w-[70%] bg-white p-12">
+                        <h2 class="uppercase text-4xl tracking-wide font-normal">
+                            The leader in interactive VR
+                        </h2>
+                        <p class="text-sm mt-12">
+                            Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind to their brand.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-child md:px-12">
+                <div class="flex flex-row justify-center md:justify-between items-center">
+                    <h2 class="uppercase text-4xl tracking-wide font-normal">
+                        Our Creations
+                    </h2>
+                    <button class="group border-2 px-12 py-4 min-w-40 hidden md:block">
+                        <span class="font-normal group-hover:font-semibold">
+                            See All
+                        </span>
+                    </button>
+                </div>
+                <div id="items-group" class="grid grid-cols-1 md:grid-cols-4 gap-8 my-8 items-group">
+                    <div class="items relative group">
+                        <img src="images/desktop/image-deep-earth.jpg" alt="" class="hidden md:block image-animate ">
+                        <img src="images/mobile/image-deep-earth.jpg" alt="" class="block md:hidden image-animate ">
+                        <div class="item-blur"></div>
+                        <div class="absolute h-full top-0 w-full flex items-end p-4">
+                            <span class="uppercase text-2xl text-white group-hover:text-black group-hover:scale-105 duration-200">
+                                Deep Earth
+                            </span>
+                        </div>
+                    </div>
+                    <div class="items relative group">
+                        <img src="images/desktop/image-night-arcade.jpg" alt="" class="hidden md:block image-animate">
+                        <img src="images/mobile/image-night-arcade.jpg" alt="" class="block md:hidden image-animate">
+                        <div class="item-blur"></div>
+                        <div class="absolute h-full top-0 w-full flex items-end p-4">
+                            <span class="uppercase text-2xl text-white group-hover:text-black group-hover:scale-105 duration-200">
+                                Night Arcade
+                            </span>
+                        </div>
+                    </div>
+                    <div class="items relative group">
+                        <img src="images/desktop/image-soccer-team.jpg" alt="" class="hidden md:block image-animate">
+                        <img src="images/mobile/image-soccer-team.jpg" alt="" class="block md:hidden image-animate">
+                        <div class="item-blur"></div>
+                        <div class="absolute h-full top-0 w-full flex items-end p-4">
+                            <span class="uppercase text-2xl text-white group-hover:text-black group-hover:scale-105 duration-200">
+                                Soccer Team VR
+                            </span>
+                        </div>
+                    </div>
+                    <div class="items relative group">
+                        <img src="images/desktop/image-grid.jpg" alt="" class="hidden md:block image-animate">
+                        <img src="images/mobile/image-grid.jpg" alt="" class="block md:hidden image-animate">
+                        <div class="item-blur"></div>
+                        <div class="absolute h-full top-0 w-full flex items-end p-4">
+                            <span class="uppercase text-2xl text-white group-hover:text-black group-hover:scale-105 duration-200">
+                                The Grid
+                            </span>
+                        </div>
+                    </div>
+                    <div class="items relative group">
+                        <img src="images/desktop/image-from-above.jpg" alt="" class="hidden md:block image-animate">
+                        <img src="images/mobile/image-from-above.jpg" alt="" class="block md:hidden image-animate">
+                        <div class="item-blur"></div>
+                        <div class="absolute h-full top-0 w-full flex items-end p-4">
+                            <span class="uppercase text-2xl text-white group-hover:text-black group-hover:scale-105 duration-200">
+                                From Up Above VR
+                            </span>
+                        </div>
+                    </div>
+                    <div class="items relative group">
+                        <img src="images/desktop/image-pocket-borealis.jpg" alt="" class="hidden md:block image-animate">
+                        <img src="images/mobile/image-pocket-borealis.jpg" alt="" class="block md:hidden image-animate">
+                        <div class="item-blur"></div>
+                        <div class="absolute h-full top-0 w-full flex items-end p-4">
+                            <span class="uppercase text-2xl text-white group-hover:text-black group-hover:scale-105 duration-200">
+                                Pocket Borealis
+                            </span>
+                        </div>
+                    </div>
+                    <div class="items relative group">
+                        <img src="images/desktop/image-curiosity.jpg" alt="" class="hidden md:block image-animate">
+                        <img src="images/mobile/image-curiosity.jpg" alt="" class="block md:hidden image-animate">
+                        <div class="item-blur"></div>
+                        <div class="absolute h-full top-0 w-full flex items-end p-4">
+                            <span class="uppercase text-2xl text-white group-hover:text-black group-hover:scale-105 duration-200">
+                                The Curiosity
+                            </span>
+                        </div>
+                    </div>
+                    <div class="items relative group">
+                        <img src="images/desktop/image-fisheye.jpg" alt="" class="hidden md:block image-animate">
+                        <img src="images/mobile/image-fisheye.jpg" alt="" class="block md:hidden image-animate">
+                        <div class="item-blur"></div>
+                        <div class="absolute h-full top-0 w-full flex items-end p-4">
+                            <span class="uppercase text-2xl text-white group-hover:text-black group-hover:scale-105 duration-200">
+                                Make it fisheye
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <button class="group border-2 px-12 py-4 w-163.5 block md:hidden">
+                        <span class="font-normal group-hover:font-semibold">
+                            See All
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-black text-white">
+            <footer class="section-child px-12 flex flex-col md:flex-row justify-between space-y-12 md:space-y-0">
+                <div class="flex flex-col items-center md:items-start">
+                  <div>
+                    <img src="images/logo.svg" alt="">
+                  </div>
+                    <ul class="flex flex-col md:flex-row w-full items-center justify-center space-y-6 md:space-y-0 space-x-0 md:space-x-4 pt-12 md:py-4">
+                        <li class="menu-item">
+                            <a href="javascript:void(0)">
+                                <span>About</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0)">
+                                <span>Careers</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0)">
+                                <span>Events</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0)">
+                                <span>Products</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0)">
+                                <span>Support</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col space-y-6">
+                    <div class="flex flex-row justify-center items-center space-x-4">
+                        <img src="images/icon-facebook.svg" alt="">
+                        <img src="images/icon-twitter.svg" alt="">
+                        <img src="images/icon-pinterest.svg" alt="">
+                        <img src="images/icon-instagram.svg" alt="">
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <p class="text-gray-300 text-sm">
+                            © 2026 Loopstudios. All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </body>
+
+    <script src="js/script.js" defer></script>
+</html>
