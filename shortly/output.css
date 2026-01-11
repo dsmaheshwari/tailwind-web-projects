@@ -40,7 +40,10 @@
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-olive-green-50: #ecfff7;
+    --color-olive-green-100: #d3ffee;
+    --color-olive-green-200: #aaffdd;
     --color-olive-green-400: #20ffa5;
+    --color-olive-green-500: #00f387;
     --color-olive-green-600: #00cb6c;
     --color-olive-green-700: #009e57;
     --color-olive-green-800: #007b4a;
@@ -425,6 +428,15 @@
   .bg-olive-green-50 {
     background-color: var(--color-olive-green-50);
   }
+  .bg-olive-green-200 {
+    background-color: var(--color-olive-green-200);
+  }
+  .bg-olive-green-600 {
+    background-color: var(--color-olive-green-600);
+  }
+  .bg-olive-green-700 {
+    background-color: var(--color-olive-green-700);
+  }
   .bg-olive-green-800 {
     background-color: var(--color-olive-green-800);
   }
@@ -516,11 +528,23 @@
   .text-olive-green-50 {
     color: var(--color-olive-green-50);
   }
+  .text-olive-green-100 {
+    color: var(--color-olive-green-100);
+  }
+  .text-olive-green-400 {
+    color: var(--color-olive-green-400);
+  }
+  .text-olive-green-500 {
+    color: var(--color-olive-green-500);
+  }
   .text-olive-green-600 {
     color: var(--color-olive-green-600);
   }
   .text-olive-green-700 {
     color: var(--color-olive-green-700);
+  }
+  .text-olive-green-800 {
+    color: var(--color-olive-green-800);
   }
   .text-olive-green-900 {
     color: var(--color-olive-green-900);
@@ -537,6 +561,26 @@
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-2xl {
+    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-xl {
+    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-olive-green-400 {
+    --tw-shadow-color: #20ffa5;
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, var(--color-olive-green-400) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-olive-green-800 {
+    --tw-shadow-color: #007b4a;
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, var(--color-olive-green-800) var(--tw-shadow-alpha), transparent);
+    }
   }
   .outline {
     outline-style: var(--tw-outline-style);
