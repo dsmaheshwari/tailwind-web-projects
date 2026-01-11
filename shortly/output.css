@@ -428,8 +428,14 @@
   .bg-olive-green-50 {
     background-color: var(--color-olive-green-50);
   }
+  .bg-olive-green-100 {
+    background-color: var(--color-olive-green-100);
+  }
   .bg-olive-green-200 {
     background-color: var(--color-olive-green-200);
+  }
+  .bg-olive-green-400 {
+    background-color: var(--color-olive-green-400);
   }
   .bg-olive-green-600 {
     background-color: var(--color-olive-green-600);
