@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "TikTok Sans", sans-serif;
+
+  /* Colors */
+  --color-olive-green-50: #ecfff7;
+  --color-olive-green-100: #d3ffee;
+  --color-olive-green-200: #aaffdd;
+  --color-olive-green-300: #68ffc5;
+  --color-olive-green-400: #20ffa5;
+  --color-olive-green-500: #00f387;
+  --color-olive-green-600: #00cb6c;
+  --color-olive-green-700: #009e57;
+  --color-olive-green-800: #007b4a;
+  --color-olive-green-900: #025a38;
+  --color-olive-green-950: #003a21;
+
+  /* Primary Button */
+  --action-button-primary-bg: var(--color-olive-green-900);
+  --action-button-primary-text: #FFF;
+  --action-button-primary-border: var(--color-olive-green-900);
+  /* Secondary Button*/
+  --action-button-secondary-bg: #FFF;
+  --action-button-secondary-text: var(--color-olive-green-900);
+  --action-button-secondary-border: var(--color-olive-green-900);
+  }
+
+@layer base {
+  section { 
+    @apply px-8;
+
+    @variant md {
+      @apply mx-auto max-w-7xl;
+    }
+  }
+
+  .menu-links {
+    .menu-link-item {
+      @apply text-olive-green-700 font-semibold border-b-2 border-b-transparent;
+
+      @variant hover {
+        @apply border-b-2 border-olive-green-700 duration-200;
+      }
+    }
+  }
+
+  .button-container {
+    @apply flex flex-row items-center;
+  }
+
+  .action-button-primary,
+  .action-button-secondary {
+    @apply px-12 py-3 rounded-lg min-h-13 min-w-45 text-lg font-semibold cursor-pointer;
+
+    @variant not-first {
+      @apply ml-2;
+    }
+
+    @variant md {
+      @variant hover {
+        @apply opacity-70 duration-75;
+      }
+    }
+  }
+
+  footer {
+    .footer {
+      background-image: url("images/bg-boost-desktop.svg");
+      @apply bg-no-repeat bg-cover py-24;
+    }
+  }
+
+  .ficon:hover {
+    /* Recolor white SVGs used via <img> to olive-green-400 using CSS filter */
+    filter: brightness(0) saturate(100%) invert(69%) sepia(64%) saturate(652%) hue-rotate(75deg) brightness(103%) contrast(102%);
+  }
+}
+
+@layer utilities {
+  .menu-button {
+    @apply px-3 rounded-lg size-10 cursor-pointer select-none;
+  }
+}
+
+@utility action-button-primary {
+  background-color: var(--action-button-primary-bg);
+  color: var(--action-button-primary-text);
+  border: 1px solid var(--action-button-primary-border);
+}
+
+@utility action-button-secondary {
+  background-color: var(--action-button-secondary-bg);
+  color: var(--action-button-secondary-text);
+  border: 1px solid var(--action-button-secondary-border);
+}
+
+/* Fancy animated hamburger */
+@layer base {
+  .menu-button .lines {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 18px; /* 3 lines of 2px with 7px gap total */
+  }
+  .menu-button .hamburger-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-olive-green-900), var(--color-olive-green-600));
+    border-radius: 9999px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+    transform-origin: center;
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+    transition:
+      transform 360ms cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 260ms ease,
+      background-color 300ms ease,
+      box-shadow 300ms ease;
+  }
+  .menu-button .hamburger-line:nth-child(1) { transform: translateY(calc(-50% - 6px)); }
+  .menu-button .hamburger-line:nth-child(2) { transform: translateY(-50%); }
+  .menu-button .hamburger-line:nth-child(3) { transform: translateY(calc(-50% + 6px)); }
+
+  /* Hover glow */
+  .menu-button:hover .hamburger-line {
+    filter: brightness(1.05);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  }
+
+  /* Active (X) state */
+  .menu-button.active .hamburger-line {
+    background: var(--color-olive-green-700);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+  .menu-button.active .hamburger-line:nth-child(1) {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .menu-button.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: translateY(-50%) scaleX(0.35);
+    transition-delay: 20ms; /* slight stagger for flair */
+  }
+  .menu-button.active .hamburger-line:nth-child(3) {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
