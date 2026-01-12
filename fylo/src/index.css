@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* Use class-based dark mode by redefining the built-in `dark:` variant */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Noto Serif", serif;
+  --app-padding: 0 0.75rem;
+}
+
+@layer base {
+  * {
+    @variant dark {
+          @apply text-white;
+    }
+  }
+
+  header {
+    padding: var(--app-padding);
+
+    @variant md {
+      @apply max-w-5xl mx-auto;
+    }
+  }
+
+  button {
+    @apply border border-transparent bg-slate-800 text-amber-200 p-1 rounded-xl outline-none duration-200;
+
+    @variant dark {
+      @apply bg-amber-200 duration-200 text-slate-800 font-semibold;
+    }
+
+    @variant hover {
+      @apply border border-gray-300 cursor-pointer;
+    }
+  }
+
+  .component {
+    @apply max-w-5xl mx-auto;
+  }
+
+  .menu {
+    .menu-item {
+      @variant dark {
+        @variant hover {
+          @apply text-amber-200;
+        }
+      }
+    }
+
+    .menu-bottom-border {
+      @apply w-0 h-0.5 group-hover:w-full bg-black;
+
+      @variant dark {
+        @apply bg-amber-200;
+      }
+    }
+  }
+
+  .application {
+    @apply bg-slate-100 min-h-screen duration-200;
+
+    @variant dark {
+      @apply bg-slate-800 min-h-screen duration-200;
+    }
+  }
+}

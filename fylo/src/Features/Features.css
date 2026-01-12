@@ -1,0 +1,11 @@
+@custom-variant dark (&:where(.dark, .dark *));
+
+.features-component {
+    @reference
+
+    @apply bg-white;
+
+    @variant dark {
+        @apply bg-[#181f2a];
+    }
+}

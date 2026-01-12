@@ -1,0 +1,12 @@
+@custom-variant dark (&:where(.dark, .dark *));
+
+.background-section {
+    @reference
+
+    background-image: url(../assets/bg-curvy-light-mode.svg);
+    @apply bg-no-repeat bg-bottom bg-contain duration-200;
+
+    @variant dark {
+        background-image: url(../assets/bg-curvy-dark-mode.svg);
+    }
+}
