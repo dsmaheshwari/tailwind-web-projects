@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Fraunces", serif;
+  --app-max-width-lg: 70vw;
+  --app-max-width-sm: 90vw;
+}
+
+@layer base {
+  * {
+    scroll-margin-top: 84px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@utility app-max-width {
+  margin: 0 auto;
+  max-width: var(--app-max-width-sm);
+
+  @variant lg {
+    max-width: var(--app-max-width-lg);
+  }
+}
+
+@layer base {
+  .button-primary {
+    @apply min-w-24 bg-rose-400 py-2 px-12 rounded-xl text-white font-semibold border border-rose-400;
+
+    @variant hover {
+      @apply bg-white text-rose-400 duration-100;
+    }
+
+    @variant active {
+      @apply bg-white text-rose-400 duration-100;
+    }
+  }
+
+  .button-secondary {
+    @apply min-w-24 bg-indigo-400 py-2 px-12 rounded-xl text-white font-semibold border border-indigo-400;
+
+    @variant hover {
+      @apply bg-white text-indigo-400 duration-100;
+    }
+
+    @variant active {
+      @apply bg-white text-indigo-400 duration-100;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@reference "tailwindcss";
+
+@layer components {
+    [data-download] {
+        .bg-dots {
+            background-image: url("../../assets/bg-dots.svg");
+            @apply bg-repeat-x;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@reference "tailwindcss";
+
+@layer components {
+  [data-header] {
+    .header {
+      @apply flex flex-row items-center justify-between py-4;
+    }
+  }
+}

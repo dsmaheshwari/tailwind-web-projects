@@ -1,0 +1,29 @@
+@reference "tailwindcss";
+
+@layer components {
+    [data-faq] {
+        .faq-list {
+            @apply text-gray-400;
+
+            .chevron {
+                @apply rotate-0 duration-200;
+            }
+
+            .answer {
+                @apply block h-0 origin-top scale-y-0 transition-transform duration-200 ease-out;
+            }
+
+            .is-active {
+                @apply text-rose-500;
+
+                .chevron {
+                    @apply rotate-180 duration-200;
+                }
+
+                .answer {
+                    @apply block h-full scale-y-100 transition-transform duration-200 ease-in;
+                }
+            }
+        }
+    }
+}

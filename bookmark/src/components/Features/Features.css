@@ -1,0 +1,23 @@
+@reference "tailwindcss";
+
+@layer components {
+    [data-features] {
+        .features {
+            @apply flex flex-row gap-x-10 items-center;
+
+            .features-item {
+                @apply tracking-normal flex-1 text-center;
+
+                span {
+                    @apply inline-block origin-left transition-transform text-rose-400;
+                }
+
+                @variant hover {
+                    span {
+                        @apply scale-x-110 duration-75 text-rose-500;
+                    }
+                }
+            }
+        }
+    }
+}
