@@ -69,13 +69,13 @@ function Menu() {
             <div id="mobile-menu-list" className={(isActive ? 'opacity-100' : 'pointer-events-none opacity-0') + ' fixed inset-0 z-20 bg-rose-200/80 backdrop-blur-md transition-opacity duration-200'}>
                 <div className="flex justify-center items-center min-h-screen">
                     <div className="flex flex-col items-center space-y-16">
-                        <a href="" className="active:text-rose-500" onClick={(event) => navigateTo(event, "data-features")}>
+                        <a href="javascript:void(0)" className="active:text-rose-500" onClick={(event) => navigateTo(event, "data-features")}>
                             <span>Features</span>
                         </a>
-                        <a href="" className="active:text-rose-500" onClick={(event) => navigateTo(event, "data-download")}>
+                        <a href="javascript:void(0)" className="active:text-rose-500" onClick={(event) => navigateTo(event, "data-download")}>
                             <span>Download</span>
                         </a>
-                        <a href="" className="active:text-rose-500" onClick={(event) => navigateTo(event, "data-faq")}>
+                        <a href="javascript:void(0)" className="active:text-rose-500" onClick={(event) => navigateTo(event, "data-faq")}>
                             <span>FAQ</span>
                         </a>
                         <button className="button-primary">Login</button>
