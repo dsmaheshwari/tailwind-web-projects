@@ -10,7 +10,7 @@ function FeatureCard({ imageSrc, alt, children }) {
     let cancelled = false;
     async function load() {
       try {
-        const mod = await import(`../../assets/${imageSrc}`);
+        const mod = await import(`../../assets/${imageSrc}.svg`);
         if (!cancelled) setImage(mod.default || mod);
       } catch (e) {
         if (!cancelled) setImage("");

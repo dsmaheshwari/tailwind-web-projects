@@ -1,7 +1,7 @@
 [
   {
     "id": "feature-1",
-    "image": "illustration-features-tab-1.svg",
+    "image": "illustration-features-tab-1",
     "alt": "Feature 1",
     "title": "Bookmark in one click",
     "menuTitle": "Simple Bookmarking",
@@ -9,7 +9,7 @@
   },
   {
     "id": "feature-2",
-    "image": "illustration-features-tab-2.svg",
+    "image": "illustration-features-tab-2",
     "alt": "Feature 2",
     "title": "Intelligent search",
     "menuTitle": "Speed Searching",
@@ -17,7 +17,7 @@
   },
   {
     "id": "feature-3",
-    "image": "illustration-features-tab-3.svg",
+    "image": "illustration-features-tab-3",
     "alt": "Feature 3",
     "title": "Share your bookmarks",
     "menuTitle": "Easy Sharing",
