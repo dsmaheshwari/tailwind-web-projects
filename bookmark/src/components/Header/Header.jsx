@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useCallback, useRef } from "react";
 import Logo from "../../assets/logo-bookmark.svg";
 import Menu from "../Menu/Menu";
 import './Header.css';
@@ -6,19 +6,21 @@ import './Header.css';
 function Header() {
     const headerRef = useRef();
 
-    useEffect(() => {
+    const scrollHandler = useCallback(function () {
         const ref = headerRef.current;
 
-        document.addEventListener("scroll", function() {
-            if(window.scrollY > 20) {
-                ref.classList.add("shadow-lg", "duration-200");
-            } else {
-                ref.classList.remove("shadow-lg", "duration-200");
-            }
-        });
+        if (window.scrollY > 20) {
+            ref.classList.add("shadow-lg", "duration-200");
+        } else {
+            ref.classList.remove("shadow-lg", "duration-200");
+        }
+    }, []);
 
-        return document.removeEventListener("scroll", this);
-    });
+    useEffect(() => {
+        document.addEventListener("scroll", scrollHandler);
+
+        return () => { document.removeEventListener("scroll", scrollHandler); }
+    }, [scrollHandler]);
 
     return (
         <div data-header id="data-header" className=" sticky top-0 bg-white z-50">
