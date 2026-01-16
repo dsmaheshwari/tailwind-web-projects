@@ -32,7 +32,7 @@ function Download() {
                                     <img src={FirefoxLogo} alt="" />
                                 </div>
                                 <div className="mt-8">
-                                    <h4 className="font-bold text-2xl">Add to Chrome</h4>
+                                    <h4 className="font-bold text-2xl">Add to Firefox</h4>
                                     <p className="text-gray-400">Minimum version 108</p>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@ function Download() {
                                     <img src={OperaLogo} alt="" />
                                 </div>
                                 <div className="mt-8">
-                                    <h4 className="font-bold text-2xl">Add to Chrome</h4>
+                                    <h4 className="font-bold text-2xl">Add to Opera</h4>
                                     <p className="text-gray-400">Minimum version 108</p>
                                 </div>
                             </div>
