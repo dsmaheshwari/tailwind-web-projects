@@ -11,7 +11,7 @@ function LandingCard() {
         // trigger RTL reveal by scaling from the right
         el.classList.add("scale-x-100", "transition-transform", "duration-700", "ease-in-out");
         el_img.classList.add("scale-100", "transition-transform", "duration-700", "ease-in-out");
-    });
+    }, [heroId, heroImage]);
 
     const navigateTo = useCallback((section) => {
         document.getElementById(section).scrollIntoView();
