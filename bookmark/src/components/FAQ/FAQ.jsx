@@ -63,7 +63,7 @@ function FAQ() {
                         </div>
                         <div data-faq-item id={id3} className={"flex flex-col justify-between w-full  border-b border-b-gray-200 pb-3 px-6"}>
                             <button type="button" onClick={showFAQ} className="inline-flex justify-between items-center w-full">
-                                <h5 className="text-lg">Is ther a mobile app?</h5>
+                                <h5 className="text-lg">Is there a mobile app?</h5>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" className="chevron">
                                     <path fill="none" stroke="currentColor" strokeWidth="3" d="M1 1l8 8 8-8"></path>
                                 </svg>
