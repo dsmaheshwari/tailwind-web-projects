@@ -1,17 +1,17 @@
-import { useCallback, useEffect, useId } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import IllustrationImg from "../../assets/illustration-hero.svg";
 
 function LandingCard() {
-    const heroId = useId();
-    const heroImage = useId();
+    const heroRef = useRef(null);
+    const heroImageRef = useRef(null);
 
     useEffect(() => {
-        const el = document.getElementById(heroId);
-        const el_img = document.getElementById(heroImage);
+        const el = heroRef.current;
+        const el_img = heroImageRef.current;
         // trigger RTL reveal by scaling from the right
         el.classList.add("scale-x-100", "transition-transform", "duration-700", "ease-in-out");
         el_img.classList.add("scale-100", "transition-transform", "duration-700", "ease-in-out");
-    }, [heroId, heroImage]);
+    }, [heroRef, heroImageRef]);
 
     const navigateTo = useCallback((section) => {
         document.getElementById(section).scrollIntoView();
@@ -35,8 +35,8 @@ function LandingCard() {
                     </div>
                 </div>
                 <div className="hidden lg:block relative w-1/2 lg:pl-6">
-                    <img id={heroImage} src={IllustrationImg} alt="" className="scale-0"/>
-                    <div id={heroId} className="-z-1 bg-rose-300 h-full w-500 overflow-hidden absolute top-[30%] left-0 rounded-l-full transform origin-right scale-x-0">
+                    <img ref={heroImageRef} src={IllustrationImg} alt="" className="scale-0"/>
+                    <div ref={heroRef} className="-z-1 bg-rose-300 h-full w-500 overflow-hidden absolute top-[30%] left-0 rounded-l-full transform origin-right scale-x-0">
                     </div>
                 </div>
             </div>
